@@ -4,3 +4,5 @@ Here, you can find plugins to enhance your Infinity Engine, extending its capabi
 
 ![banner](assets/banner.png)
 
+
+* [Plugins folder](plugins/)

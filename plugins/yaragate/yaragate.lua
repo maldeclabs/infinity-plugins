@@ -185,7 +185,7 @@ create_route("/load/yara/rule", HTTPMethod.Post, function(req)
     end)
 
     if compiled_rule then
-        print(yara:save_rules_file(rules_save_stream)) -- Backup rules
+        yara:save_rules_file(rules_save_stream) -- Backup rules
         local message = Json:new()
         message:add("message", "Rule compiled successfully")
 
