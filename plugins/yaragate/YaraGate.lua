@@ -11,7 +11,8 @@ local api <const> = {
     disable_rules = require("plugins.yaragate.api.DisableRules"):new(),
     enable_rules = require("plugins.yaragate.api.EnableRules"):new(),
     load_rule = require("plugins.yaragate.api.LoadRules"):new(),
-    get_reset_rules = require("plugins.yaragate.api.GetResetRules"):new()
+    get_reset_rules = require("plugins.yaragate.api.GetResetRules"):new(),
+    get_compiled_rules = require("plugins.yaragate.api.GetCompiledRules"):new()
 }
 
 local yara <const> = require("plugins.yaragate.MYara"):new()
@@ -40,6 +41,9 @@ api.get_rules:load()
 
 api.enable_rules:setup(server, yara)
 api.enable_rules:load()
+
+api.get_compiled_rules:setup(server, yara)
+api.get_compiled_rules:load()
 
 api.get_reset_rules:setup(server, yara)
 api.get_reset_rules:load()
